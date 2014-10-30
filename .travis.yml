@@ -24,3 +24,4 @@ script:
     - julia -e 'Pkg.test("HttpServer", coverage=true)'
 after_success:
     - julia -e 'cd(Pkg.dir("HttpServer")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+
